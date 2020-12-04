@@ -27,14 +27,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+DOM stands for Document Object Model. This is the way that browsers are organized and this model describes its hierarchy. Knowing this structure allows us to access elements in the document and manipulate them.
 
 2. What is an event?
+An event is attached to an element on the document. When the event is triggered, the event object that was passed in as an argumnent will execute and propogate unless prevented. 
 
 3. What is an event listener?
+An event listener is a method that allows us to place an event on an element. The .addEventListener will take an event type and event object as an argument.
 
 4. Why would we convert a NodeList into an Array?
+A NodeList is like an array-like object and does not have access to methods that arrays have. If we convert the NodeList into an Array, the NodeList could be easily manipulated.  
 
 5. What is a component?
+A component is a container that can organize elements on the document. Anything can be categorized as a component and it's useful for organizing classes of elements. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 

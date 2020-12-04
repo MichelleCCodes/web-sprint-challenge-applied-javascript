@@ -2,7 +2,7 @@
 // -----------------------
 // Send an HTTP GET request to the following address: https://lambda-times-api.herokuapp.com/articles
 // Study the response data you get back, closely.
-// You will be creating a card for each article in the response.
+// You will be creating a card for each article in the response. res.articles (5 items)
 // This won't be as easy as just iterating over an array though.
 //
 // Write a function that takes a single article object and returns the following markup:
@@ -20,3 +20,21 @@
 // Add a listener for click events so that when a user clicks on a card, the headline of the article is logged to the console.
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
+
+import axios from "axios"
+
+axios 
+.get('https://lambda-times-api.herokuapp.com/articles')
+.then(res => {
+    console.log(res.data)
+    console.log(res.data.articles)
+})
+.catch(err => {
+    console.log('the error is right before your eyes!')
+})
+
+const cardsContainer = document.querySelector(".cards-container");
+function makeArticle(articleObj) {
+
+
+}

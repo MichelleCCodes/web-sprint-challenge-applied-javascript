@@ -15,15 +15,18 @@ import axios from "axios"
 axios
 .get('https://lambda-times-api.herokuapp.com/topics')
 .then (res => {
-console.log(res.data)
-console.log(res.data.topics);
+res.data.topics.forEach(item => {
+    let newTab = tabMaker(item); 
+    title.appendChild(newTab);
+})
 })
 .catch(err => {
 console.log('you are staring at the error!');
 })
- 
+
 const title = document.querySelector(".title");
- 
+console.log(title)
+
 function tabMaker(topic) {
 const tab = document.createElement("div");
 tab.classList.add("tab");
@@ -31,3 +34,4 @@ tab.textContent = `${topic}`;
  
 return tab;
 }
+

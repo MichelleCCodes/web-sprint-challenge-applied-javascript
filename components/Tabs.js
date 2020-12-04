@@ -25,7 +25,6 @@ console.log('you are staring at the error!');
 })
 
 const title = document.querySelector(".title");
-console.log(title)
 
 function tabMaker(topic) {
 const tab = document.createElement("div");
